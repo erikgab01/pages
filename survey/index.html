@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title" class="text-centre">Test survey form</h1>
+        <p id="description" class="text-centre">description</p>
+        <form id="survey-form">
+            <div class="form-element">
+                <label id="name-label" for="name">Name</label>
+                <input id="name" type="text" class="field" placeholder="Enter your name" required>
+            </div>
+            <div class="form-element">
+                <label id="email-label" for="email">Email</label>
+                <input id="email" type="email" class="field" placeholder="Enter your email" required>
+            </div>
+            <div class="form-element">
+                <label id="number-label" for="number">Age(Optional)</label>
+                <input id="number" type="number" class="field" placeholder="Enter your age" required min="0" max="100">
+            </div>
+            <div class="form-element">
+                <label><input type="radio" name="test-radio">Test1</label>
+                <label><input type="radio" name="test-radio">Test2</label>
+                <label><input type="radio" name="test-radio">Test2</label>
+            </div>
+            <div class="form-element">
+                <input type="checkbox" name="test-check">
+                <input type="checkbox" name="test-check">
+            </div>
+            <div class="form-element">
+                <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+            </div>
+            <div class="form-element">
+                <button id="submit" type="submit">Send</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
