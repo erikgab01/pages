@@ -59,10 +59,6 @@ p {
     }
     .col-t-row {
         margin-left: -26px;
-        margin-right: -26px;
+        margin-right: -26px; 
     }
-}
-/* Mobile */
-@media (max-width: 767px) {
-    
 }
