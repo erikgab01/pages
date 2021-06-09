@@ -1,45 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Form</title>
 </head>
 <body>
-    <div class="container">
-        <h1 id="title" class="text-centre">Test survey form</h1>
-        <p id="description" class="text-centre">description</p>
-        <form id="survey-form">
+    <h1 id="title">Test survey form</h1>
+    <p id="description">description</p>
+    <form id="survey-form">
+        <div class="container">
+            <!-- Name -->
             <div class="form-element">
                 <label id="name-label" for="name">Name</label>
                 <input id="name" type="text" class="field" placeholder="Enter your name" required>
             </div>
+            <!-- Email -->
             <div class="form-element">
                 <label id="email-label" for="email">Email</label>
                 <input id="email" type="email" class="field" placeholder="Enter your email" required>
             </div>
+            <!-- Age -->
             <div class="form-element">
                 <label id="number-label" for="number">Age(Optional)</label>
                 <input id="number" type="number" class="field" placeholder="Enter your age" required min="0" max="100">
             </div>
             <div class="form-element">
+                <label for="dropdown">Choose option</label>
+                <select id="dropdown" class="field">
+                    <option disabled selected>Choose option</option>
+                    <option>option1</option>
+                    <option>option2</option>
+                    <option>option3</option>
+                </select>
+            </div>
+            <div class="form-element">
+                <label>Choose one</label>
                 <label><input type="radio" name="test-radio">Test1</label>
                 <label><input type="radio" name="test-radio">Test2</label>
                 <label><input type="radio" name="test-radio">Test2</label>
             </div>
             <div class="form-element">
-                <input type="checkbox" name="test-check">
-                <input type="checkbox" name="test-check">
+                <label>Choose multiple</label>
+                <label><input type="checkbox" name="test-check" value="test1">Test1</label>
+                <label><input type="checkbox" name="test-check" value="test2">Test2</label>
             </div>
             <div class="form-element">
-                <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+                <label for="comments">Leave comments</label>
+                <textarea id="comments" class="field" name="comment"></textarea>
             </div>
             <div class="form-element">
-                <button id="submit" type="submit">Send</button>
+                <button id="submit" type="submit">Submit</button>
             </div>
-        </form>
-    </div>
+        </div>
+    </form>
 </body>
 </html>
