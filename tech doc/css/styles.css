@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+/* Сброс настроек списков от браузера */
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+/* Сброс настроек ссылок от браузера */
+a, a::after {
+    text-decoration: none;
+    color: black;
+}
+.navigation ul li {
+    border-top: 1px solid black;
+}
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 15vw;
+    border-right: 1px solid black;
+}
+.navigation h1, .navigation ul li {
+    padding: 20px;
+    margin: 0;
+}
+.main-content {
+    position: absolute;
+    left: 320px;
+    right: 50px;
+}
+
+article p {
+    padding: 0 10px;
+}
+code {
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    background-color: #f7f7f7;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 5px;
+  }
+
+@media (max-width: 815px) {
+    .navigation h1 {
+        text-align: center;
+    }
+    .navigation {
+        position: static;
+        width: 100%;
+        height: auto;
+        border: none;
+    }
+    .navigation ul {
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: 235px;
+        border: 1px solid black;
+    }
+    .main-content {
+        position: static;
+        margin: 15px;
+    }
+}
