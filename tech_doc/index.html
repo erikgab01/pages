@@ -8,188 +8,56 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav id="navbar">
-        <header>JS Documentation</header>
-        <div id="menu">
-            <a class="nav-link" href="#Function_declarations">Function declarations</a>
-            <a class="nav-link" href="#Calling_functions">Calling functions</a>
-            <a class="nav-link" href="#Function_scope">Function scope</a>
-            <a class="nav-link" href="#Number_literals">Number literals</a>
-            <a class="nav-link" href="#String_literals">String literals</a>
-            <a class="nav-link" href="#Arrays">Arrays</a>
-        </div>
+    <nav class="navigation">
+        <h1>JS Documentation</h1>
+        <ul>
+            <a href="#"><li>Lorem, ipsum dolor1.</li></a>
+            <a href="#"><li>Lorem, ipsum dolor2.</li></a>
+            <a href="#"><li>Lorem, ipsum dolor3.</li></a>
+            <a href="#"><li>Lorem, ipsum dolor4.</li></a>
+            <a href="#"><li>Lorem, ipsum dolor5.</li></a>
+            <a href="#"><li>Lorem, ipsum dolor6.</li></a>
+        </ul>
     </nav>
-    <main id="main-doc">
-        <section id="Function_declarations" class="main-section">
-            <header>Function declarations</header>
+    <div class="main-content">
+        <section>
+            <h2>Lorem, ipsum dolor1</h2>
             <article>
-                <p>A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:</p>
-                <ul>
-                    <li>The name of the function.</li>
-                    <li>A list of parameters to the function, enclosed in parentheses and separated by commas</li>
-                    <li>The JavaScript statements that define the function, enclosed in curly brackets, {...}.</li>
-                </ul>
-                <p>For example, the following code defines a simple function named square:</p>
-                <code>function square(number) {
-                    return number * number;
-                    }</code>
-                <p>The function square takes one parameter, called number. The function consists of one statement that says to return the parameter of the function (that is, number) multiplied by itself. The statement return specifies the value returned by the function:</p>
-                <code>return number * number;</code>
-                <p>Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function.</p>
-                <p>If you pass an object (i.e. a non-primitive value, such as Array or a user-defined object) as a parameter and the function changes the object's properties, that change is visible outside the function, as shown in the following example:</p>
-                <code>function myFunc(theObject) {
-                    theObject.make = 'Toyota';
-                    }
-
-                    var mycar = {make: 'Honda', model: 'Accord', year: 1998};
-                    var x, y;
-
-                    x = mycar.make; // x gets the value "Honda"
-
-                    myFunc(mycar);
-                    y = mycar.make; // y gets the value "Toyota"
-                    // (the make property was changed by the function)</code>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At nostrum aliquam cum. Veniam facilis odit quaerat recusandae voluptatum tenetur, hic rerum aliquid dicta quasi magnam voluptates iure nostrum ipsam laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, commodi omnis saepe earum nesciunt eaque hic exercitationem ipsam voluptas temporibus incidunt, dicta quam accusantium? Cum consequatur fugit id quisquam pariatur?</p>
+                <code>function greetMe(yourName) { alert("Hello " + yourName); } 
+                    greetMe("World");</code>
             </article>
         </section>
-        <section id="Calling_functions" class="main-section">
-            <header>Calling functions</header>
+        <section>
+            <h2>Lorem, ipsum dolor2</h2>
             <article>
-                <p>Defining a function does not execute it. Defining it names the function and specifies what to do when the function is called.</p>
-                <p>Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the function square, you could call it as follows:</p>
-                <code>square(5);</code>
-                <p>The preceding statement calls the function with an argument of 5. The function executes its statements and returns the value 25.</p>
-                <p>Functions must be in scope when they are called, but the function declaration can be hoisted (appear below the call in the code), as in this example:</p>
-                <code>console.log(square(5));
-                    /* ... */
-                    function square(n) { return n * n }</code>
-                <p>The scope of a function is the function in which it is declared (or the entire program, if it is declared at the top level).</p>
-                <p>The arguments of a function are not limited to strings and numbers. You can pass whole objects to a function. The showProps() function (defined in Working with objects) is an example of a function that takes an object as an argument.</p>
-                <p>A function can call itself. For example, here is a function that computes factorials recursively:</p>
-                <code>function factorial(n) {
-                    if ((n === 0) || (n === 1))
-                    return 1;
-                    else
-                    return (n * factorial(n - 1));
-                    }</code>
-                <p>You could then compute the factorials of 1 through 5 as follows:</p>
-                <code>var a, b, c, d, e;
-                    a = factorial(1); // a gets the value 1
-                    b = factorial(2); // b gets the value 2
-                    c = factorial(3); // c gets the value 6
-                    d = factorial(4); // d gets the value 24
-                    e = factorial(5); // e gets the value 120</code>
-                <p>There are other ways to call functions. There are often cases where a function needs to be called dynamically, or the number of arguments to a function vary, or in which the context of the function call needs to be set to a specific object determined at runtime.</p>
-                <p>It turns out that functions are themselves objects—and in turn, these objects have methods. One of these, the apply() method, can be used to achieve this goal.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At nostrum aliquam cum. Veniam facilis odit quaerat recusandae voluptatum tenetur, hic rerum aliquid dicta quasi magnam voluptates iure nostrum ipsam laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, commodi omnis saepe earum nesciunt eaque hic exercitationem ipsam voluptas temporibus incidunt, dicta quam accusantium? Cum consequatur fugit id quisquam pariatur?</p>
             </article>
         </section>
-        <section id="Function_scope" class="main-section">
-            <header>Function scope</header>
+        <section>
+            <h2>Lorem, ipsum dolor3</h2>
             <article>
-                <p>Variables defined inside a function cannot be accessed from anywhere outside the function, because the variable is defined only in the scope of the function. However, a function can access all variables and functions defined inside the scope in which it is defined.</p>
-                <p>In other words, a function defined in the global scope can access all variables defined in the global scope. A function defined inside another function can also access all variables defined in its parent function, and any other variables to which the parent function has access.</p>
-                <code>// The following variables are defined in the global scope
-                    var num1 = 20,
-                    num2 = 3,
-                    name = 'Chamakh';
-
-                    // This function is defined in the global scope
-                    function multiply() {
-                    return num1 * num2;
-                    }
-
-                    multiply(); // Returns 60
-
-                    // A nested function example
-                    function getScore() {
-                    var num1 = 2,
-                    num2 = 3;
-
-                    function add() {
-                    return name + ' scored ' + (num1 + num2);
-                    }
-
-                    return add();
-                    }
-
-                    getScore(); // Returns "Chamakh scored 5"</code>
-                <p>A function can refer to and call itself. There are three ways for a function to refer to itself:</p>
-                <ol>
-                    <li>The function's name</li>
-                    <li>arguments.callee</li>
-                    <li>An in-scope variable that refers to the function</li>
-                </ol>
-                <p>For example, consider the following function definition:</p>
-                <code>var foo = function bar() {
-                    // statements go here
-                    }</code>
-                <p>Within the function body, the following are all equivalent:</p>
-                <ol>
-                    <li>bar()</li>
-                    <li>arguments.callee()</li>
-                    <li>foo()</li>
-                </ol>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At nostrum aliquam cum. Veniam facilis odit quaerat recusandae voluptatum tenetur, hic rerum aliquid dicta quasi magnam voluptates iure nostrum ipsam laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, commodi omnis saepe earum nesciunt eaque hic exercitationem ipsam voluptas temporibus incidunt, dicta quam accusantium? Cum consequatur fugit id quisquam pariatur?</p>
             </article>
         </section>
-        <section id="Number_literals" class="main-section">
-            <header>Number literals</header>
+        <section>
+            <h2>Lorem, ipsum dolor4</h2>
             <article>
-                <p>In JavaScript, numbers are implemented in double-precision 64-bit binary format IEEE 754</p>
-                <p>In addition to being able to represent floating-point numbers, the number type has three symbolic values: +Infinity, -Infinity, and NaN (not-a-number).</p>
-                <p>A more recent addition to JavaScript is BigInt which lets you represent integers that may be very large. There are caveats to using BigInt, however; for example, you can't mix and match BigInt and Number values in the same operation, and you can't use the Math object with BigInt values.</p>
-                <p>You can use four types of number literals: decimal, binary, octal, and hexadecimal.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At nostrum aliquam cum. Veniam facilis odit quaerat recusandae voluptatum tenetur, hic rerum aliquid dicta quasi magnam voluptates iure nostrum ipsam laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, commodi omnis saepe earum nesciunt eaque hic exercitationem ipsam voluptas temporibus incidunt, dicta quam accusantium? Cum consequatur fugit id quisquam pariatur?</p>
             </article>
         </section>
-        <section id="String_literals" class="main-section">
-            <header>String literals</header>
+        <section>
+            <h2>Lorem, ipsum dolor5</h2>
             <article>
-                <p>You can create simple strings using either single or double quotes:</p>
-                <code>'foo'
-                    "bar"</code>
-                <p>More advanced strings can be created using escape sequences:</p>
-                <p>The number after \x is interpreted as a hexadecimal number.</p>
-                <code>'\xA9' // "©"</code>
-                <p>The Unicode escape sequences require at least four hexadecimal digits following \u.</p>
-                <code>'\u00A9' // "©"</code>
-                <p>New in ECMAScript 2015. With Unicode code point escapes, any character can be escaped using hexadecimal numbers so that it is possible to use Unicode code points up to 0x10FFFF. With simple Unicode escapes it is often necessary to write the surrogate halves separately to achieve the same result.</p>
-                <code>'\u{2F804}'
-
-                    // the same with simple Unicode escapes
-                    '\uD87E\uDC04'</code>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At nostrum aliquam cum. Veniam facilis odit quaerat recusandae voluptatum tenetur, hic rerum aliquid dicta quasi magnam voluptates iure nostrum ipsam laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, commodi omnis saepe earum nesciunt eaque hic exercitationem ipsam voluptas temporibus incidunt, dicta quam accusantium? Cum consequatur fugit id quisquam pariatur?</p>
             </article>
         </section>
-        <section id="Arrays" class="main-section">
-            <header>Arrays</header>
+        <section>
+            <h2>Lorem, ipsum dolor6</h2>
             <article>
-                <p>An array is an ordered list of values that you refer to with a name and an index.</p>
-                <p>For example, consider an array called emp, which contains employees' names indexed by their numerical employee number. So emp[0] would be employee number zero, emp[1] employee number one, and so on.</p>
-                <p>JavaScript does not have an explicit array data type. However, you can use the predefined Array object and its methods to work with arrays in your applications. The Array object has methods for manipulating arrays in various ways, such as joining, reversing, and sorting them. It has a property for determining the array length and other properties for use with regular expressions.</p>
-                <p>The following statements create equivalent arrays:</p>
-                <code>let arr = new Array(element0, element1, ..., elementN)
-                    let arr = Array(element0, element1, ..., elementN)
-                    let arr = [element0, element1, ..., elementN]</code>
-                <p>The bracket syntax is called an "array literal" or "array initializer." It's shorter than other forms of array creation, and so is generally preferred.</p>
-                <p>To create an array with non-zero length, but without any items, either of the following can be used:</p>
-                <code>// This...
-                    let arr = new Array(arrayLength)
-
-                    // ...results in the same array as this
-                    let arr = Array(arrayLength)
-
-                    // This has exactly the same effect
-                    let arr = []
-                    arr.length = arrayLength</code>
-                <p>If you wish to initialize an array with a single element, and the element happens to be a Number, you must use the bracket syntax. When a single Number value is passed to the Array() constructor or function, it is interpreted as an arrayLength, not as a single element.</p>
-                <code>let arr = [42]       // Creates an array with only one element:
-                    // the number 42.
-
-                    let arr = Array(42)  // Creates an array with no elements
-                    // and arr.length set to 42.
-                    //
-                    // This is equivalent to:
-                    let arr = []
-                    arr.length = 42</code>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At nostrum aliquam cum. Veniam facilis odit quaerat recusandae voluptatum tenetur, hic rerum aliquid dicta quasi magnam voluptates iure nostrum ipsam laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, commodi omnis saepe earum nesciunt eaque hic exercitationem ipsam voluptas temporibus incidunt, dicta quam accusantium? Cum consequatur fugit id quisquam pariatur?</p>
             </article>
         </section>
-    </main>
+    </div>
 </body>
 </html>
