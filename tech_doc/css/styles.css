@@ -4,21 +4,37 @@
 body {
     margin: 0;
 }
-/* Сброс настроек списков от браузера */
-.navigation ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+#navbar header {
+    font-size: 30px;
+    font-weight: bold;
 }
-/* Сброс настроек ссылок от браузера */
+section header {
+    font-size: 26px;
+    font-weight: bold;
+}
+article {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+section {
+    margin-top: 30px;
+}
+#menu {
+    /* Сброс настроек списков от браузера */
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 80%;
+    font-size: 18px;
+}
 a, a::after {
+    /* Сброс настроек ссылок от браузера */
     text-decoration: none;
     color: black;
+    display: block;
 }
-.navigation ul li {
+#menu a {
     border-top: 1px solid black;
 }
-.navigation {
+#navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -26,11 +42,11 @@ a, a::after {
     width: 300px;
     border-right: 1px solid black;
 }
-.navigation h1, .navigation ul li {
+#navbar header, #menu a {
     padding: 20px;
     margin: 0;
 }
-.main-content {
+#main-doc {
     position: absolute;
     left: 320px;
     right: 50px;
@@ -51,25 +67,26 @@ code {
     padding: 15px;
     margin: 15px;
     border-radius: 5px;
+    font-size: 14px;
   }
-
+/* Mobile */
 @media (max-width: 815px) {
-    .navigation h1 {
+    #navbar header {
         text-align: center;
     }
-    .navigation {
+    #navbar {
         position: static;
         width: 100%;
         height: auto;
         border: none;
     }
-    .navigation ul {
+    #menu {
         overflow-y: auto;
         overflow-x: hidden;
         max-height: 235px;
         border: 1px solid black;
     }
-    .main-content {
+    #main-doc {
         position: static;
         margin: 15px;
     }
