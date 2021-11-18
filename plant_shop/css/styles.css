@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    display: flex;
+}
+
+header .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 2;
+    margin-left: 200px;
+}
+
+header .content .desc h1 {
+    color: #156963;
+    font-size: 68px;
+    line-height: 83px;
+}
+
+header .content .desc p {
+    color: #2C1500;
+    font-size: 18px;
+    line-height: 32px;
+    margin-top: 30px;
+    width: 60%
+}
+
+header .content .buttons {
+    display: flex;
+}
+
+.next {
+    background: #156963;
+}
+
+.previous {
+    background: #FFFFFF;
+} 
+
+.next, .previous {
+    width: 50%;
+    height: 140px;
+    padding: 20px;
+    padding-left: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons button .line {
+    display: flex;
+    align-items: center;
+}
+
+.next .text-plant {
+    font-size: 32px;
+    line-height: 39px;
+    color: #FFFFFF;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.previous .text-plant {
+    font-size: 32px;
+    line-height: 39px;
+    color: #156963;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.next .line .direction {
+    font-size: 24px;
+    line-height: 29px;
+    color: #F2F2F2;
+    margin-right: 10px;
+}
+
+.previous .line .direction {
+    font-size: 24px;
+    line-height: 29px;
+    color: #333333;
+    margin-left: 10px;
+}
+
+header .content .login-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+.login-bar .sign-in {
+    background: #156963;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-bar .sign-up {
+    background: #FFFFFF;
+    color: #156963;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-bar button {
+    margin-right: 40px;
+    border: none;
+    background: #FFFFFF;
+    cursor: pointer;
+}
